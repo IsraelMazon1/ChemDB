@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compounds - Chemical Compound Explorer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="compounds">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mt-5">
+            <h1>Chemical Compounds</h1>
+            <button id="logoutBtn" class="btn btn-danger">Logout</button>
+        </div>
+
+        <!-- Add Compound Form -->
+        <div class="mt-4 mb-5">
+            <h2>Add a New Compound</h2>
+            <form id="addCompoundForm">
+                <div class="form-group">
+                    <label for="compoundName">Name:</label>
+                    <input type="text" class="form-control" id="compoundName" required>
+                </div>
+                <div class="form-group">
+                    <label for="compoundFormula">Formula:</label>
+                    <input type="text" class="form-control" id="compoundFormula" required>
+                </div>
+                <div class="form-group">
+                    <label for="compoundWeight">Molecular Weight:</label>
+                    <input type="number" step="0.01" class="form-control" id="compoundWeight" required>
+                </div>
+                <div class="form-group">
+                    <label for="compoundDetails">Details:</label>
+                    <textarea class="form-control" id="compoundDetails" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="compoundApplications">Applications:</label>
+                    <textarea class="form-control" id="compoundApplications" rows="3" placeholder="Separate multiple applications with semicolons." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Add Compound</button>
+                <div id="addCompoundError" class="text-danger mt-2"></div>
+            </form>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="form-group">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search compounds by name or formula...">
+        </div>
+        <!-- Compounds List -->
+        <div id="compoundList" class="row">
+            <!-- Compound cards will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

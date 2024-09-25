@@ -1,0 +1,24 @@
+# Environment Variables
+.env
+*.env
+
+# Sensitive Folders
+.gitignore/
+
+# Node Modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build Output
+/dist
+/build
+
+
